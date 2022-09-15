@@ -703,7 +703,7 @@ body {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -714,7 +714,7 @@ body {
   padding-right: 40px;
 
   width: 528px;
-  /* height: 581px; */
+  min-height: 581px;
 
   background: var(--main-theme-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -727,14 +727,12 @@ body {
 
 .close-modal-btn {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 8px;
+  top: 8px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: 8px;
 
   width: 30px;
   height: 30px;
@@ -777,6 +775,15 @@ body {
 .callback-form-label {
   display: block;
   margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+}
+
+.callback-form-label-comment {
+  display: block;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -845,6 +852,7 @@ body {
 }
 
 .callback-form-comment {
+  display: block;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -876,6 +884,8 @@ body {
 }
 
 .callback-form-check {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -946,8 +956,6 @@ body {
   padding-bottom: 10px;
   padding-left: 54px;
   padding-right: 54px;
-
-  margin-bottom: 40px;
 
   font-family: inherit;
   font-weight: 700;
